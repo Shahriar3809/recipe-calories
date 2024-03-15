@@ -13,7 +13,7 @@
     "recipe_id": "002",
     "recipe_name": "Quinoa Salad",
     "short_description": "A refreshing salad bursting with Mediterranean flavors.",
-    "ingredients": ["200 g quinoa", "1 cucumber", "200 g cherry tomatoes", "100 g feta cheese"],
+    "ingredients": ["200 g quinoa",  "200 g cherry tomatoes", "100 g feta cheese"],
     "preparing_time": "25 min",
     "calories": "250 calories"
   },
@@ -22,7 +22,7 @@
     "recipe_id": "003",
     "recipe_name": "Tomato Basil Pasta",
     "short_description": "A comforting pasta dish with a creamy tomato basil sauce.",
-    "ingredients": ["300 g pasta", "500 ml tomato sauce", "100 g fresh basil", "200 ml heavy cream"],
+    "ingredients": ["300 g pasta",  "100 g fresh basil", "200 ml heavy cream"],
     "preparing_time": "35 min",
     "calories": "400 calories"
   },
@@ -50,7 +50,7 @@
     "recipe_name": "Classic Beef",
     "short_description": "Layers of tender pasta, rich meat sauce, and creamy cheese.",
     "ingredients": ["400 g lasagna noodles", "500 g ground beef", "800 ml marinara sauce", "300 g mozzarella cheese"],
-    "preparing_time": "1 hour",
+    "preparing_time": "60 min",
     "calories": "480 calories"
   }
 ]

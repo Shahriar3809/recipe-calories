@@ -45,7 +45,7 @@ const Recipes = () => {
     return (
       <div>
         <h1 className="text-center text-3xl font-bold mt-20">Our Recipes</h1>
-        <p className="text-center max-w-[700px] m-auto">
+        <p className="text-center max-w-[700px] m-auto my-5">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam minus
           nesciunt maiores nihil similique laudantium quam explicabo corrupti
           voluptatibus saepe.

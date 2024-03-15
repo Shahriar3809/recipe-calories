@@ -19,6 +19,9 @@ const Recipes = () => {
 
   const [wantToCook, setWantToCook] = useState([]);
 
+
+
+
   const handleCookButton = (item) => {
     setWantToCook([...wantToCook, item]);
   }
@@ -33,9 +36,11 @@ const Recipes = () => {
      
      setWantToCook(remaining);
      setPreparingItem([...preparingItem, deleted[0]]);
-   };
 
-   console.log(preparingItem);
+
+
+
+   };
 
     return (
       <div>

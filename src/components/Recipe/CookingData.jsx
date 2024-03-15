@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 
-const CookingData = ({ data, key, index }) => {
-    console.log(index)
+const CookingData = ({ data, index }) => {
   const { recipe_name, preparing_time, calories } = data;
   return (
     <tr className="bg-gray-100 ">
@@ -16,7 +15,6 @@ const CookingData = ({ data, key, index }) => {
 
 CookingData.propTypes = {
   data: PropTypes.any,
-  key: PropTypes.number,
   index: PropTypes.number
 };
 

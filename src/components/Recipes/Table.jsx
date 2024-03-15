@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
 import TableData from "../Recipe/TableData";
 import CookingData from "../Recipe/CookingData";
-
+import Total from "../Recipe/Total";
 
 const Table = ({ wantToCook, handlePreparing, preparingItem }) => {
-  console.log(preparingItem);
+
   return (
     <div className="">
       <div>
@@ -42,16 +42,13 @@ const Table = ({ wantToCook, handlePreparing, preparingItem }) => {
             <th>Time</th>
             <th>Calories</th>
           </tr>
-          {
-            preparingItem.map((item, index)=> <CookingData key={index} index={index} data={item}></CookingData>)
-          }
+          {preparingItem.map((item, index) => (
+            <CookingData key={index} index={index} data={item}></CookingData>
+          ))}
         </table>
       </div>
 
-      <div className="flex gap-5 font-bold text-xl">
-        <p>Total Time: </p>
-        <p>Total Calories: </p>
-      </div>
+      <Total preparingItem={preparingItem}></Total>
     </div>
   );
 };
@@ -61,7 +58,7 @@ const Table = ({ wantToCook, handlePreparing, preparingItem }) => {
 Table.propTypes = {
   wantToCook: PropTypes.object,
   handlePreparing: PropTypes.func,
-  preparingItem: PropTypes.array
+  preparingItem: PropTypes.any
 };
 
 

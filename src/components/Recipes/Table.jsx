@@ -1,8 +1,10 @@
 import PropTypes from "prop-types";
 import TableData from "../Recipe/TableData";
+import CookingData from "../Recipe/CookingData";
 
-const Table = ({ wantToCook }) => {
-  console.log(wantToCook);
+
+const Table = ({ wantToCook, handlePreparing, preparingItem }) => {
+  console.log(preparingItem);
   return (
     <div className="">
       <div>
@@ -18,14 +20,19 @@ const Table = ({ wantToCook }) => {
             <th>Calories</th>
           </tr>
           {wantToCook.map((item, index) => (
-            <TableData item={item} index={index} key={item.recipe_id}></TableData>
+            <TableData
+              item={item}
+              index={index}
+              handlePreparing={handlePreparing}
+              key={item.recipe_id}
+            ></TableData>
           ))}
         </table>
       </div>
 
-      <div>
+      <div className="my-8">
         <h1 className="text-2xl text-center font-semibold p-5">
-          Currently Cooking: 01
+          Currently Cooking: {preparingItem.length}
         </h1>
         <hr />
         <table className="w-full ">
@@ -35,13 +42,9 @@ const Table = ({ wantToCook }) => {
             <th>Time</th>
             <th>Calories</th>
           </tr>
-          <tr className="bg-gray-100 ">
-            <td>1.</td>
-            <td>Chicken Caesar</td>
-            <td>20 minutes</td>
-            <td>400 Calories</td>
-            <td></td>
-          </tr>
+          {
+            preparingItem.map((item, index)=> <CookingData key={index} index={index} data={item}></CookingData>)
+          }
         </table>
       </div>
 
@@ -57,6 +60,8 @@ const Table = ({ wantToCook }) => {
 
 Table.propTypes = {
   wantToCook: PropTypes.object,
+  handlePreparing: PropTypes.func,
+  preparingItem: PropTypes.array
 };
 
 

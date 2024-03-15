@@ -23,7 +23,10 @@ const Recipes = () => {
 
 
   const handleCookButton = (item) => {
-    setWantToCook([...wantToCook, item]);
+    const isExist = wantToCook.find((i) => i.recipe_id == item.recipe_id);
+    if(!isExist) {
+      setWantToCook([...wantToCook, item]);
+    }
   }
 
 

@@ -8,7 +8,7 @@ const Table = ({ wantToCook, handlePreparing, preparingItem }) => {
   return (
     <div className="">
       <div>
-        <h1 className="text-2xl text-center font-semibold py-5 text-white bg-green-500">
+        <h1 className="text-2xl text-center font-semibold py-2 text-white bg-green-500">
           Want to Cook: {wantToCook.length}
         </h1>
         <hr />
@@ -31,7 +31,7 @@ const Table = ({ wantToCook, handlePreparing, preparingItem }) => {
       </div>
 
       <div className="my-8">
-        <h1 className="text-2xl text-center font-semibold py-5 mt-16 text-white bg-green-500">
+        <h1 className="text-2xl text-center font-semibold py-2 mt-16 text-white bg-green-500">
           Currently Cooking: {preparingItem.length}
         </h1>
         <hr />

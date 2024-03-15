@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 
 const Total = ({ preparingItem }) => {
-    console.log(preparingItem)
+    
 
     
   return (

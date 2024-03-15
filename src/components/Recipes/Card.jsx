@@ -1,73 +1,71 @@
+import PropTypes from "prop-types";
+import { MdOutlineWatchLater } from "react-icons/md";
+import { FaFireAlt } from "react-icons/fa";
 
-
-const Card = () => {
-    return (
-      <div className="w-7/12">
-        <div className="grid grid-cols-2">
-
-
-          <div className="card w-72 bg-base-100 shadow-xl">
-            <figure className="px-3 pt-3">
-              <img
-                src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                alt="Shoes"
-                className="rounded-xl"
-              />
-            </figure>
-            <div className="p-3 space-y-3">
-              <h2 className="card-title">Shoes!</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <hr />
-              <h3>Ingredients: 6</h3>
-              <ul>
-                <li>500g ground beef</li>
-                <li>500g ground beef</li>
-                <li>500g ground beef</li>
-              </ul>
-              <hr />
-              <div className="flex justify-around">
-                <p>30 Minutes</p>
-                <p>600 Calories</p>
+const Card = ({ data, handleCookButton }) => {
+  const {
+    recipe_image,
+    calories,
+    ingredients,
+    preparing_time,
+    recipe_name,
+    short_description,
+  } = data;
+  return (
+    <div className="">
+      <div className="grid grid-cols-2">
+        <div className="card w-72 bg-base-100 shadow-xl">
+          <figure className="px-3 pt-3">
+            <img
+              src={recipe_image}
+              alt="Shoes"
+              className="rounded-xl h-[200px]"
+            />
+          </figure>
+          <div className="p-3 space-y-3">
+            <h2 className="card-title">{recipe_name}</h2>
+            <p>{short_description}</p>
+            <hr />
+            <h3 className="font-bold text-xl">
+              Ingredients: {ingredients.length}
+            </h3>
+            <ul className="list-disc pl-5">
+              {ingredients.map((item, index) => (
+                <li key={index}>{item} </li>
+              ))}
+            </ul>
+            <hr />
+            <div className="flex justify-around">
+              <div className="flex items-center gap-2">
+                <MdOutlineWatchLater />
+                <p> {preparing_time}</p>
               </div>
-              <div className="card-actions">
-                <button className="btn btn-primary">Want to Cook</button>
-              </div>
-            </div>
-          </div>
-
-          <div className="card w-72 bg-base-100 shadow-xl">
-            <figure className="px-3 pt-3">
-              <img
-                src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                alt="Shoes"
-                className="rounded-xl"
-              />
-            </figure>
-            <div className="p-3 space-y-3">
-              <h2 className="card-title">Shoes!</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <hr />
-              <h3>Ingredients: 6</h3>
-              <ul>
-                <li>500g ground beef</li>
-                <li>500g ground beef</li>
-                <li>500g ground beef</li>
-              </ul>
-              <hr />
-              <div className="flex justify-around">
-                <p>30 Minutes</p>
-                <p>600 Calories</p>
-              </div>
-              <div className="card-actions">
-                <button className="btn btn-primary">Want to Cook</button>
+              <div className="flex items-center gap-2">
+                <FaFireAlt />
+                <p> {calories}</p>
               </div>
             </div>
+            <div className="card-actions">
+              <button
+                onClick={() => handleCookButton(data)}
+                className="btn btn-primary"
+              >
+                Want to Cook
+              </button>
+            </div>
           </div>
-
-
         </div>
       </div>
-    );
+    </div>
+  );
 };
+
+
+Card.propTypes = {
+  data: PropTypes.object,
+  handleCookButton: PropTypes.func
+};
+
+
 
 export default Card;

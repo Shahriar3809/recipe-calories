@@ -19,7 +19,7 @@ const Card = ({ data, handleCookButton }) => {
             <img src={recipe_image} alt="" className="w-full h-full" />
           </figure>
           <div className="  p-3 space-y-1">
-            <h2 className="font-bold">{recipe_name}</h2>
+            <h2 className="font-bold text-xl">{recipe_name}</h2>
             <p>{short_description}</p>
             <hr />
             <h3 className="font-bold text-xl">

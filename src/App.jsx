@@ -10,6 +10,7 @@ function App() {
       <div className='max-w-[1170px] m-auto'>
         <Header></Header>
         <Recipes></Recipes>
+        
       </div>
     </>
   );

@@ -2,7 +2,8 @@ import { useState } from "react";
 import Card from "./Card";
 import Table from "./Table";
 import { useEffect } from "react";
-
+import "react-toastify/dist/ReactToastify.css";
+ import { ToastContainer, toast } from "react-toastify";
 
 const Recipes = () => {
   const [data, setData] = useState([]);
@@ -26,7 +27,10 @@ const Recipes = () => {
     const isExist = wantToCook.find((i) => i.recipe_id == item.recipe_id);
     if(!isExist) {
       setWantToCook([...wantToCook, item]);
+    } else {
+      toast.warn("Already added");
     }
+    
   }
 
 
@@ -47,11 +51,11 @@ const Recipes = () => {
 
     return (
       <div>
-        <h1 className="text-center text-3xl font-bold mt-20">Our Recipes</h1>
+        <h1 className="text-center text-3xl font-bold mt-12">Our Recipes</h1>
         <p className="text-center max-w-[700px] m-auto my-5">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam minus
-          nesciunt maiores nihil similique laudantium quam explicabo corrupti
-          voluptatibus saepe.
+          Indulge in a culinary adventure with Our Recipes. Explore a diverse
+          array of dishes crafted by our seasoned chefs, meticulously curated to
+          tantalize your taste buds and inspire your inner chef.
         </p>
         <div className="flex gap-3">
           <div className="grid grid-cols-2 w-7/12 gap-5">
@@ -71,6 +75,7 @@ const Recipes = () => {
             ></Table>
           </div>
         </div>
+        <ToastContainer />
       </div>
     );
 };

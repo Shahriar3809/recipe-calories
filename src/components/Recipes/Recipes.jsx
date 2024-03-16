@@ -3,7 +3,7 @@ import Card from "./Card";
 import Table from "./Table";
 import { useEffect } from "react";
 import "react-toastify/dist/ReactToastify.css";
- import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 
 const Recipes = () => {
   const [data, setData] = useState([]);
@@ -57,8 +57,8 @@ const Recipes = () => {
           array of dishes crafted by our seasoned chefs, meticulously curated to
           tantalize your taste buds and inspire your inner chef.
         </p>
-        <div className="flex gap-3">
-          <div className="grid grid-cols-2 w-7/12 gap-5">
+        <div className="md:flex gap-8">
+          <div className="md:grid grid-cols-2 md:w-7/12 gap-5">
             {data.map((item) => (
               <Card
                 data={item}
@@ -67,7 +67,7 @@ const Recipes = () => {
               ></Card>
             ))}
           </div>
-          <div className="w-5/12">
+          <div className="md:w-5/12">
             <Table
               wantToCook={wantToCook}
               handlePreparing={handlePreparing}

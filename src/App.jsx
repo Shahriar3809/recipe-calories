@@ -7,10 +7,9 @@ function App() {
 
   return (
     <>
-      <div className='max-w-[1170px] m-auto'>
+      <div className='max-w-[1170px] m-auto p-5'>
         <Header></Header>
         <Recipes></Recipes>
-        
       </div>
     </>
   );

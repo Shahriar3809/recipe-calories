@@ -3,9 +3,9 @@ import { FaRegUserCircle } from "react-icons/fa";
 
 const Nav = () => {
   return (
-    <div className="flex justify-between items-center  py-6">
+    <div className="md:flex md:justify-between items-center  py-6">
       <div>
-        <h1 className="text-3xl font-bold">Recipe Calories</h1>
+        <h1 className=" text-2xl md:text-3xl font-bold">Recipe Calories</h1>
       </div>
       <div>
         <ul className="flex gap-5 text-base font-semibold cursor-pointer">

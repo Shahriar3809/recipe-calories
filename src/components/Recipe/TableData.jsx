@@ -9,12 +9,12 @@ const TableData = ({ item, index, handlePreparing }) => {
       <td>{preparing_time}</td>
       <td>{calories}</td>
       <td>
-        <button
+      <button
           onClick={() => handlePreparing(item.recipe_id)}
           className="p-1 px-4 text-white rounded-full bg-green-500 m-2"
         >
           Preparing
-        </button>
+      </button>
       </td>
     </tr>
   );

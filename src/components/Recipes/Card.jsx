@@ -12,18 +12,14 @@ const Card = ({ data, handleCookButton }) => {
     short_description,
   } = data;
   return (
-    <div className="border-2 rounded-xl">
-      <div className="grid grid-cols-2">
-        <div className="card w-72 h-[500px] bg-base-100 shadow-xl">
-          <figure className="px-3 pt-3">
-            <img
-              src={recipe_image}
-              alt="Shoes"
-              className="rounded-xl h-[200px]"
-            />
+    <div className="rounded-xl ">
+      <div className="">
+        <div className="card w-full p-1 h-[600px] bg-gray-100 border-4 border-green-500 shadow-xl">
+          <figure className="m-3 h-72 rounded-t-2xl ">
+            <img src={recipe_image} alt="" className="w-full h-full" />
           </figure>
-          <div className="p-3 space-y-1">
-            <h2 className="card-title">{recipe_name}</h2>
+          <div className="  p-3 space-y-1">
+            <h2 className="font-bold">{recipe_name}</h2>
             <p>{short_description}</p>
             <hr />
             <h3 className="font-bold text-xl">

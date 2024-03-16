@@ -8,7 +8,6 @@ import { ToastContainer, toast } from "react-toastify";
 const Recipes = () => {
   const [data, setData] = useState([]);
 
-
   useEffect(()=>{
     fetch('alldata.json')
     .then(response => response.json())
@@ -17,11 +16,7 @@ const Recipes = () => {
     })
   }, [])
 
-
   const [wantToCook, setWantToCook] = useState([]);
-
-
-
 
   const handleCookButton = (item) => {
     const isExist = wantToCook.find((i) => i.recipe_id == item.recipe_id);
@@ -33,8 +28,6 @@ const Recipes = () => {
     
   }
 
-
-
    const [preparingItem, setPreparingItem] = useState([]);
 
    const handlePreparing = (id) => {
@@ -43,9 +36,6 @@ const Recipes = () => {
      
      setWantToCook(remaining);
      setPreparingItem([...preparingItem, deleted[0]]);
-
-
-
 
    };
 

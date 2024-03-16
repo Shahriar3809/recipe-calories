@@ -2,7 +2,7 @@
 
 const Banner = () => {
     return (
-      <div className="bg-[linear-gradient(to_top,#00000082,#00000082),url('https://i.ibb.co/MVGT1sD/shawnanggg-nmp-W-Www-VSc-unsplash.jpg')] bg-cover flex justify-center items-center  md:h-96 text-white rounded-2xl">
+      <div className="bg-[url('https://i.ibb.co/DKDF7hP/Rectangle-1.png')] bg-cover flex justify-center items-center  md:h-[550px] text-white rounded-2xl">
         <div className="md:p-24 md:max-w-[900px] text-center space-y-5">
           <h1 className="font-bold text-xl md:text-3xl">
             Discover an exceptional cooking class tailored for you!

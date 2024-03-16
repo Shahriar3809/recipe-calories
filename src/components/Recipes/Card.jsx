@@ -48,7 +48,7 @@ const Card = ({ data, handleCookButton }) => {
             <div className="card-actions">
               <button
                 onClick={() => handleCookButton(data)}
-                className="btn btn-primary"
+                className="btn btn-primary border-none text-white bg-green-600"
               >
                 Want to Cook
               </button>
